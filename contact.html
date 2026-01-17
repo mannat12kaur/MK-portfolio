@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Mannat Kaur</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="blobs">
+    <div class="blob" style="left:-80px; top:80px;"></div>
+    <div class="blob b2" style="right:-120px; top:180px;"></div>
+    <div class="blob b3" style="left:160px; bottom:-120px;"></div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="brand-dot"></span> Mannat Kaur</div>
+      <div class="nav-links">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="projects.html" data-nav>Projects</a>
+        <a class="active" href="contact.html" data-nav>Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card section reveal">
+      <h2>Contact</h2>
+      <p class="small">Fastest way: email. You can also connect on LinkedIn.</p>
+
+      <div class="grid">
+        <div class="tile">
+          <b>Email</b>
+          <div class="small">Click to copy:</div>
+          <div class="actions" style="margin-top:10px;">
+            <button class="btn primary" onclick="copyText('your.email@gmail.com')">Copy Email</button>
+            <a class="btn" href="mailto:your.email@gmail.com">Send Email</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <b>LinkedIn</b>
+          <div class="actions" style="margin-top:10px;">
+            <a class="btn primary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Open LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <b>GitHub</b>
+          <div class="actions" style="margin-top:10px;">
+            <a class="btn primary" href="https://github.com/mannat12kaur" target="_blank" rel="noreferrer">Open GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">Copied!</div>
+    <div class="footer" style="margin: 34px 0 18px; text-align:center; color:rgba(233,240,255,0.45); font-size:.88rem;">
+      © <span id="y"></span> Mannat Kaur
+    </div>
+  </div>
+
+  <button class="chat-fab" onclick="toggleChat()" aria-label="Open Ask Mannat">
+    <span>AI</span>
+  </button>
+  <div class="chat" id="chat">
+    <div class="chat-head">
+      <div class="chat-title">Ask Mannat</div>
+      <button class="modal-close" onclick="toggleChat()">Close</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot"><div class="bubble">Ask me about my roles, tech stack, education, or projects 🙂</div></div>
+    </div>
+    <div class="suggestions">
+      <button onclick="ask('What roles are you targeting?')">Roles</button>
+      <button onclick="ask('How can I contact you?')">Contact</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
