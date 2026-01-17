@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mannat Kaur | Data Analytics • AI • Data Engineering</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- animated background -->
+  <div class="blobs">
+    <div class="blob" style="left:-80px; top:80px;"></div>
+    <div class="blob b2" style="right:-120px; top:180px;"></div>
+    <div class="blob b3" style="left:160px; bottom:-120px;"></div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="brand-dot"></span> Mannat Kaur</div>
+      <div class="nav-links">
+        <a class="active" href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a href="projects.html" data-nav>Projects</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div class="card hero-left reveal">
+        <div class="kicker">Computer Science Student • Data Analytics • AI (light) • Data Engineering</div>
+        <h1>Hi, I’m <span>Mannat</span>.</h1>
+
+        <div class="avatar-wrap">
+          <!-- Put your ONE photo here -->
+          <img class="avatar" src="assets/profile.jpg" alt="Mannat Kaur portrait" />
+          <div>
+            <p class="small">I build fun, practical, data-driven projects: dashboards, mini pipelines, and AI-assisted apps that make smarter recommendations.</p>
+            <p class="small"><b>Currently:</b> building an AI Learning Buddy (adaptive quizzes + learning insights).</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="projects.html" data-nav>View Projects</a>
+          <a class="btn" href="https://github.com/mannat12kaur" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="card hero-right reveal">
+        <h2 style="margin:0 0 10px 0;">My Focus</h2>
+
+        <div class="tile">
+          <b>Data Analytics</b>
+          <div class="small">SQL • Python • insights • dashboards</div>
+        </div>
+
+        <div class="tile" style="margin-top:12px;">
+          <b>AI (safe + practical)</b>
+          <div class="small">recommendations • adaptive difficulty • patterns</div>
+        </div>
+
+        <div class="tile" style="margin-top:12px;">
+          <b>Data Engineering (foundation)</b>
+          <div class="small">ETL thinking • validation • data modeling</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section reveal">
+      <h2>Quick Highlights</h2>
+      <div class="grid">
+        <div class="tile">
+          <b>What I’m good at</b>
+          <div class="small">building clean projects • tracking metrics • learning fast</div>
+        </div>
+        <div class="tile">
+          <b>Tools</b>
+          <div class="small">Python • SQL • Git • Firebase • basic ML concepts</div>
+        </div>
+        <div class="tile">
+          <b>Goal</b>
+          <div class="small">Entry Data Analyst/BI → grow into Data Engineering</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section reveal">
+      <h2>Try the mini “Ask Mannat” assistant</h2>
+      <p class="small">Click the chat button bottom-right and ask about my roles, tech stack, education, or projects.</p>
+    </div>
+
+    <div class="toast" id="toast">Copied!</div>
+
+    <div class="footer" style="margin: 34px 0 18px; text-align:center; color:rgba(233,240,255,0.45); font-size:.88rem;">
+      © <span id="y"></span> Mannat Kaur • GitHub Pages
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <button class="chat-fab" onclick="toggleChat()" aria-label="Open Ask Mannat">
+    <span>AI</span>
+  </button>
+
+  <div class="chat" id="chat">
+    <div class="chat-head">
+      <div class="chat-title">Ask Mannat</div>
+      <button class="modal-close" onclick="toggleChat()">Close</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot"><div class="bubble">Hey! Ask me about my roles, tech stack, education, or projects 🙂</div></div>
+    </div>
+    <div class="suggestions">
+      <button onclick="ask('What roles are you targeting?')">Roles</button>
+      <button onclick="ask('What is your tech stack?')">Tech stack</button>
+      <button onclick="ask('Tell me about AI Learning Buddy')">AI Learning Buddy</button>
+      <button onclick="ask('What is your education?')">Education</button>
+      <button onclick="ask('How are you learning data engineering?')">Data engineering</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
