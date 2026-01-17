@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Mannat Kaur</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="blobs">
+    <div class="blob" style="left:-80px; top:80px;"></div>
+    <div class="blob b2" style="right:-120px; top:180px;"></div>
+    <div class="blob b3" style="left:160px; bottom:-120px;"></div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="brand-dot"></span> Mannat Kaur</div>
+      <div class="nav-links">
+        <a href="index.html" data-nav>Home</a>
+        <a href="about.html" data-nav>About</a>
+        <a class="active" href="projects.html" data-nav>Projects</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card section reveal">
+      <h2>Projects</h2>
+      <p class="small">Click any project to see a pop-up with details.</p>
+
+      <div class="grid">
+        <div class="tile" role="button" tabindex="0"
+          onclick="openModal({
+            title:'AI Learning Buddy (In Progress)',
+            desc:'An AI-assisted quiz app that tracks accuracy, speed, and weak topics, then recommends practice. Focus: learning analytics + safe personalization logic.',
+            tech:'Flutter/Dart • Firebase • Analytics logic',
+            img:'assets/project1.png',
+            tags:['adaptive quizzes','learning insights','recommendations','admin mode']
+          })">
+          <b>AI Learning Buddy</b>
+          <div class="small">Adaptive quizzes + learning insights</div>
+        </div>
+
+        <div class="tile" role="button" tabindex="0"
+          onclick="openModal({
+            title:'Real-World Data Analytics Case Study',
+            desc:'A complete analysis project: cleaning, exploration, visuals, and insights. Includes a short report + notebook.',
+            tech:'Python (pandas) • SQL • matplotlib',
+            img:'assets/project2.png',
+            tags:['EDA','data cleaning','visuals','insights']
+          })">
+          <b>Data Analytics Case Study</b>
+          <div class="small">Cleaning → analysis → visuals → recommendations</div>
+        </div>
+
+        <div class="tile" role="button" tabindex="0"
+          onclick="openModal({
+            title:'Mini Data Pipeline (ETL)',
+            desc:'A starter data engineering project: raw data → validation → transformations → stored tables → metrics. Built to show ETL thinking.',
+            tech:'Python • SQL • Git/GitHub',
+            img:'assets/project3.png',
+            tags:['ETL','validation','data modeling','metrics']
+          })">
+          <b>Mini Data Pipeline</b>
+          <div class="small">ETL foundation + reliable metrics</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">Copied!</div>
+    <div class="footer" style="margin: 34px 0 18px; text-align:center; color:rgba(233,240,255,0.45); font-size:.88rem;">
+      © <span id="y"></span> Mannat Kaur
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-head">
+        <div class="modal-title" id="modalTitle">Project</div>
+        <button class="modal-close" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" id="modalImg" src="assets/project1.png" alt="Project preview"/>
+        <div>
+          <p id="modalDesc" class="small"></p>
+          <div class="small"><b>Tech:</b> <span id="modalTech"></span></div>
+          <div class="badges" id="modalBadges"></div>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn primary" href="#" target="_blank" rel="noreferrer">GitHub (add link)</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Demo (add link)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="chat-fab" onclick="toggleChat()" aria-label="Open Ask Mannat">
+    <span>AI</span>
+  </button>
+  <div class="chat" id="chat">
+    <div class="chat-head">
+      <div class="chat-title">Ask Mannat</div>
+      <button class="modal-close" onclick="toggleChat()">Close</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot"><div class="bubble">Ask me about my roles, tech stack, education, or projects 🙂</div></div>
+    </div>
+    <div class="suggestions">
+      <button onclick="ask('What roles are you targeting?')">Roles</button>
+      <button onclick="ask('What is your tech stack?')">Tech stack</button>
+      <button onclick="ask('Tell me about AI Learning Buddy')">AI Learning Buddy</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
